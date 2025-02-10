@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Health Analysis Data</title>
+    <link rel="stylesheet" href="./health_analysis.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Health Analysis Census</h1>
+      <ul>
+        <li><a href="./index.html" id="home">Ana Sayfa </a></li>
+        <li><a href="./health_contact.html" id="contact">İletişim </a></li>
+        <li>
+          <input
+            type="text"
+            id="conditionInput"
+            placeholder="Bir sağlık durumu girin"
+          />
+        </li>
+        <li><button id="btnSearch">Ara</button></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="analysisForm">
+        <h1>Sağlık Verileri Analizi</h1>
+        <div>
+          <label for="name">İsim:</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label>Cinsiyet:</label>
+          <label for="male">Erkek</label>
+          <input type="radio" name="gender" id="male" value="Male" />
+          <label for="female">Kadın</label>
+          <input type="radio" name="gender" id="female" value="Female" />
+        </div>
+        <div>
+          <label for="age">Yaş:</label>
+          <input type="number" id="age" />
+        </div>
+        <div>
+          <label for="condition">Durum:</label>
+          <select id="condition">
+            <option value="">Durumu seçin</option>
+            <option value="Diabetes">Diyabet</option>
+            <option value="Thyroid">Tiroid</option>
+            <option value="High Blood Pressure">Yüksek Tansiyon</option>
+          </select>
+        </div>
+        <button id="addPatient">Hasta Ekle</button>
+        <h2>Analiz Raporu</h2>
+        <div id="report"></div>
+      </div>
+      <div class="searchCondition">
+        <div id="result"></div>
+      </div>
+    </div>
+    <script src="./health_analysis.js"></script>
+  </body>
+</html>
